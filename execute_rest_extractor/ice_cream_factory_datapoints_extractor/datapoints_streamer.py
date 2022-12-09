@@ -83,6 +83,6 @@ class Streamer:
             for ts in self.timeseries_list:
                 self._extract_timeseries(ts)
             if not (
-                self.config.frontfill.continuous and self.stop.wait(60.0 * self.config.frontfill.lookback_min / 6.0)
+                self.config.frontfill.continuous and self.stop.wait(60 * self.config.frontfill.lookback_min / 6.0)
             ):
                 break
